@@ -58,6 +58,38 @@ map.on('mouseenter', 'film-label', function(e){
 
 });
 
+$('#map').on('click', function(e){
+  e.preventDefault();
+  //Change the cursor style as a UI indicator
+  // map.getCanvas().style.cursor='help';
+  var coordinates = e.features[0].geometry.coordinates.slice();
+  var title = e.features[0].properties.title;
+  var extract = e.features[0].properties.extract;
+  var url = articleUrl + title;
+  //console.log(extract);
+  // Ensure that if the map is zoomed out such that multiple
+  // copies of the feature are visible, the popup appears
+  // over the copy being pointed to.
+  while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+    coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+  }
+  
+  $('#info').innerHTML=extract;
+  document.getElementById('wikiLink').href = url;
+  document.getElementById('wikiLink').classList.add('show');
+
+
+  $('#info').html(function(i, v){
+    var matches = /(.+)( is a.+)/gi.exec(v);
+    return '<strong>' + matches[1] + '</strong>' + matches[2];
+  });
+});
+
+$('#wikipediaed').on('touchstart touchend', function(e){
+  e.preventDefault();
+  $('#wikidef').toggleClass('show');
+});
+
 map.on('mouseleave', 'film-label', function() {
   map.getCanvas().style.cursor = '';
   //document.getElementById('wikiLink').classList.remove("show");
@@ -67,6 +99,11 @@ map.on('mouseleave', 'film-label', function() {
 //Definition of "Wikipedia'ed"
 document.getElementById('wikipediaed').addEventListener("mouseover", showDef);
 document.getElementById('wikipediaed').addEventListener("mouseout", hideDef);
+//document.getElementById('wikipediaed').addEventListener("onclick", toggleDef);
+
+// function toggleDef(){
+//   document.getElementById('wikidef').classList.toggle('show');
+// }
 
 function showDef(){
   document.getElementById('wikidef').classList.add('show');
