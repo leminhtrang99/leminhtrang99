@@ -77,7 +77,7 @@ function hideDef(){
 }
 
  
-document.getElementById('creditButton').addEventListener('click',showCreds);
+document.getElementById('credit-button').addEventListener('click',showCreds);
 function showCreds(){
   document.getElementById('credit').classList.add('show');
 }

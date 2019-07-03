@@ -10,7 +10,7 @@
   background-color:#1a1a1a;
   font-family:'Futura',Helvetica,Arial,sans-serif;
   padding:0 1rem;
-  transform:translate(-50%,-106%);
+  /* transform:translate(-50%,-106%); */
   transform:translate(-50%,-3px);
   border:2px solid #4878b1;
 }
@@ -40,10 +40,15 @@
 
 .header p a{
   color:#c9c9c9;
+  
 }
 
 .header h1 a{
   color:#c9c9c9;
+  /* text-decoration-line: underline;
+  text-decoration-style: dotted; */
+  text-decoration: none;
+  border-bottom: 0.5px dotted #c9c9c9;
 }
 
 .header p a:hover {
@@ -62,7 +67,7 @@
   font-family:'Futura',Helvetica,Arial,sans-serif;
   color: #c9c9c9;
   position:absolute;
-  top:16%;
+  top:20%;
   left:50%;
   width:90%;
   max-width:30rem;
@@ -88,7 +93,6 @@
   line-height:1.65;
   line-height:1.5;
   padding:0.75rem;
-  width:300px;
   padding-right:2rem;
   position:fixed;
   bottom:0;
@@ -96,7 +100,7 @@
   width:100%;
   color:#c9c9c9;
   /* display:none; */
-  transform:translate(-50%,3px);
+  transform:translate(-47%, 3px);
   z-index:1000;
   cursor:pointer;
   user-select:none;
@@ -151,7 +155,7 @@
   }
 }
 
-#creditButton{
+#credit-button{
   z-index:1001;
   position:absolute;
   top:1rem;
@@ -166,6 +170,7 @@
   border:2.25px solid #ecd06b;
   display:block;
   font-size:15px;
+  text-align: center;
 }
 /* @media only screen and (min-width:50em){
   .btn--about{
@@ -203,12 +208,30 @@
   border-radius:6px;
   border:2px solid #ecd06b;
   /* display:none; */
-  font-size:16px;
+  font-size:12px;
   z-index:1001;
+  line-height:1.45;
 }
 
 #credit--box a{
   color:#c9c9c9;
+  font-weight:500;
+}
+#credit--box h4{
+  color:#c9c9c9;
+  font-weight:500;
+  font-size: 14px;
+}
+
+@media only screen and (min-width:40em){
+  #credit--box p{
+    font-size:16px;
+    line-height:1.65
+  }
+  #credit--box h4{
+    font-size:18px;
+  }
+
 }
 
 .header h1 {
@@ -220,4 +243,11 @@
   color: #c9c9c9;
   font-weight:300;
 
+}
+.container{
+  width: 100%;
+}
+
+.wrapper{
+  width: 100%;
 }
