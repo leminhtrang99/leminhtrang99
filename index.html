@@ -5,21 +5,19 @@
         <title>Trang Le</title>
         <link href='css/style.css' rel='stylesheet'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         
 
     </head>
     <body>
     <!-- Navigation bar -->
     <div class='container'>
-        <div class='row navbar'>
+        <div id="myNavBar" class='row navbar'>
             <div class='col-2 navbar-brand'>
                 <a href="index.html">Trang Le</a>
             </div>
-                <!-- <div class='col-2 nav-item'>
-                    <a class="nav-link" href="#about">about</a>
-                </div> -->
                 <div class='col-2 nav-item'>
-                        <a class="nav-link" href="codes.html">codes</a>
+                    <a class="nav-link" href="codes.html">codes</a>
                 </div>
                 <div class='col-2 nav-item'>
                     <a class="nav-link" href="data-visualization.html">data visualization</a>
@@ -33,6 +31,9 @@
                 <div class='col-2 nav-item'>
                     <a class="nav-link" href="#contact">contact</a>
                 </div>
+                <a id="navbarIcon" href ="javascript:void(0);" class="icon">
+                    <i class = "fa fa-bars"></i>
+                </a>
         </div>
     </div>
     <div class='container'>    
@@ -56,20 +57,6 @@
             </div>
         </div>
     </div>
-    <!-- <div class='container'>
-        <div class='row'>
-            <div class='section-header col-12' id="codes">
-                <p>codes</p>
-            </div>
-        </div>
-    </div>
-    <div class='container'>
-        <div class='row'>
-            <div class='section-header col-12' id="dataVisualization">
-                <p>data visualization</p>
-            </div>
-        </div>
-    </div> -->
     <div class='container'>
         <div class='row contact' id='contact'>
             <div class='col-4 contact-item'>
@@ -83,6 +70,6 @@
             </div>
         </div> 
     </div>
-    
+    <script src="javascripts/javascript.js"></script>
     </body>
 </html>

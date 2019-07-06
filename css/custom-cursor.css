@@ -1,0 +1,9 @@
+body{
+    cursor: url(../img/film-map-of-the-world.png), auto;
+}
+
+.cursor{
+    width:20px;
+    height: 20px;
+    position: absolute;
+}
