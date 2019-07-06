@@ -264,10 +264,6 @@ p {
     font-size:1.5em;
 }
 .project-gallery{
-    border-top: 4px solid #282828;
-    border-top-width: 4px;
-    border-top-style: solid;
-    border-top-color: rgb(40, 40, 40);
     padding-top: .5rem;
     margin: 0 auto 5rem auto;
 }
@@ -291,12 +287,18 @@ a h3:hover{
 
 .navbar {
   overflow: hidden;
+  width:100%;
+  /* margin:0; */
+  border-bottom: 4px solid #282828;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(40, 40, 40);
 }
 
 .navbar a {
   float:left;
   display:block;
-  text-align: center;
+  text-align:center;
   padding: 14px 16px;
 
 }
@@ -305,23 +307,75 @@ a h3:hover{
   display: none;
 }
 
-@media screen and (max-width: 719px) {
+@media only screen and (max-width: 719px) {
   .nav-item {display: none;}
   .navbar a.icon {
     float: right;
     display: block;
+    /* right: 0; */
   }
 }
 
-@media screen and (max-width: 719px) {
-  .navbar.responsive {position: relative;}
-  .navbar.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+
+
+.sidebar {
+  position: fixed;
+  right: 0;
+  top:4.3rem;
+  height: calc(100vh - 4rem);
+  transform: translate3d(25rem,0,0);
+  width: 18rem;
+  padding: 1rem;
+  background-color: #282828;
+  color: #fff;
+  z-index: 1001;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  -o-transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out,-
+  webkit-transform 250ms ease-in-out;
+  display: block;
+}
+
+
+.sidebar.is-reveal {
+  /* -webkit-transform: translate3d(0,0,0); */
+  transform: translate3d(0,0,0);
+}
+
+.sidebar-item {
+  display: block;
+  text-align: left;
+  position: relative;
+  height: 3rem;
+  margin-left:5%;
+  padding-top:4%;
+}
+.sidebar-item a{
+  color: #fff;
+  position: relative;
+  
+}
+@media only screen and (max-width: 719px) {
+  .navbar{
+    border-bottom:none;
+    box-shadow: 0 0 2px rgba(40,40,40,.25);
+    margin-left:-5%;
+    top:0;
+    left:5%;
+    position: fixed;
+    background-color: #fff;
+    z-index: 1001;
   }
-  .navbar.responsive .nav-item {
-    display: inline-block;
-    text-align: left;
+  .section-content{
+    margin-top:4.3rem;
+    padding-top:0.8rem;
+    /* position: fixed; */
   }
+  .project-gallery{
+    margin-top:4.3rem;
+    padding-top:0.8rem;
+  }
+
 }

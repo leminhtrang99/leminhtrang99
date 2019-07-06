@@ -1,13 +1,5 @@
 
-function responsiveNavbar(){
-    var x = document.getElementById("navBar");
-    console.log(document.getElementById("navBar").className);
-    if (document.getElementById("navBar").className == "row navbar") {
-        
-        x.classList.add('responsive');
-    } else {
-        document.getElementById("navBar").className = "row navbar";
-    }
+function revealSidebar(){
+    document.getElementById('sideBar').classList.toggle('is-reveal');
 }
-
-document.getElementById("navbarIcon").addEventListener("click", responsiveNavbar);
+document.getElementById("navbarIcon").addEventListener("click", revealSidebar);
