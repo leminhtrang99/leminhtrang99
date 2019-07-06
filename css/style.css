@@ -321,7 +321,6 @@ a h3:hover{
     top: 0;
   }
   .navbar.responsive .nav-item {
-    float: none;
     display: inline-block;
     text-align: left;
   }
