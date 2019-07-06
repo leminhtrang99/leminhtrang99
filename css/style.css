@@ -322,7 +322,7 @@ a h3:hover{
   }
   .navbar.responsive .nav-item {
     float: none;
-    display: block;
+    display: inline-block;
     text-align: left;
   }
 }
