@@ -5,35 +5,39 @@
         <title>Trang Le</title>
         <link href='css/style.css' rel='stylesheet'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
         
 
     </head>
     <body>
-    <!-- Navigation bar -->
+<!-- Navigation bar -->
     <div class='container'>
         <div id="navBar" class='row navbar'>
             <div class='col-2 navbar-brand'>
                 <a href="index.html">Trang Le</a>
-                <a id="navbarIcon" href ="javascript:void(0);" class="icon">
-                        <i class = "fa fa-bars"></i>
+                <a id="sideBarReveal" href ="javascript:void(0);" class="icon">
+                        <i data-feather="menu"></i>
+                        <!-- <i data-feather="x"></i> -->
+                </a>
+                <a id="sideBarHide" href ="javascript:void(0);" class="icon is-hidden">
+                    <i data-feather="x"></i>
                 </a>
             </div>
-                <div class='col-2 nav-item'>
-                    <a class="nav-link" href="codes.html">codes</a>
-                </div>
-                <div class='col-2 nav-item'>
-                    <a class="nav-link" href="data-visualization.html">data visualization</a>
-                </div>
-                <div class='col-2 nav-item'>
-                        <a class="nav-link" href="creative-corner.html">creative corner</a>
-                </div>
-                <div class='col-2 nav-item'>
-                    <a class="nav-link" href="">resume</a>
-                </div>
-                <div class='col-2 nav-item'>
-                    <a class="nav-link" href="#contact">contact</a>
-                </div>
+            <div class='col-2 nav-item'>
+                <a class="nav-link" href="codes.html">codes</a>
+            </div>
+            <div class='col-2 nav-item'>
+                <a class="nav-link" href="data-visualization.html">data visualization</a>
+            </div>
+            <div class='col-2 nav-item'>
+                    <a class="nav-link" href="creative-corner.html">creative corner</a>
+            </div>
+            <div class='col-2 nav-item'>
+                <a class="nav-link" href="">resume</a>
+            </div>
+            <div class='col-2 nav-item'>
+                <a class="nav-link" href="#contact">contact</a>
+            </div>
                 
         </div>
     </div>
@@ -86,5 +90,7 @@
         </div> 
     </div>
     <script src="javascripts/javascript.js"></script>
+    <script src="javascripts/feather.js"></script>
+    <script>feather.replace()</script>
     </body>
 </html>

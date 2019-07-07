@@ -299,7 +299,8 @@ a h3:hover{
   float:left;
   display:block;
   text-align:center;
-  padding: 14px 16px;
+  padding: 12px 14px;
+  line-height:1.25;
 
 }
 
@@ -314,6 +315,9 @@ a h3:hover{
     display: block;
     /* right: 0; */
   }
+  .navbar a.is-hidden {
+    display: none;
+  }
 }
 
 
@@ -321,10 +325,10 @@ a h3:hover{
 .sidebar {
   position: fixed;
   right: 0;
-  top:4.3rem;
+  top:4.25rem;
   height: calc(100vh - 4rem);
   transform: translate3d(25rem,0,0);
-  width: 18rem;
+  width: 15rem;
   padding: 1rem;
   background-color: #282828;
   color: #fff;
@@ -384,3 +388,5 @@ a h3:hover{
   }
 
 }
+
+
