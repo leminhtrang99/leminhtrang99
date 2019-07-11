@@ -269,7 +269,13 @@ p {
 }
 
 img{
-    width:100%;
+  max-width:100%;
+  display:block
+}
+
+#codes #beeLogo{
+  margin-left:1rem;
+  display:block
 }
 
 a{
