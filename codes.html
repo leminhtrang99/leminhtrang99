@@ -39,7 +39,7 @@
             </div>
         <aside id="sideBar" class="sidebar">
                 <div class='sidebar-item'>
-                        <a class="nav-link" href="codes.html">codes</a>
+                    <a class="nav-link" href="codes.html">codes</a>
                 </div>
                 <div class='sidebar-item'>
                     <a class="nav-link" href="data-visualization.html">data visualization</a>
@@ -58,7 +58,7 @@
             <div class="row">
                 <div class="col-4">
                 <div class="gallery">
-                        <img id ="beeLogo" src="img/bee++/logo.png" alt="Bee++_app_logo" width="213.33" height="200">
+                        <img class="hover-shadow" id ="beeLogo" src="img/bee++/logo.png" alt="Bee++_app_logo" width="213.33" height="200">
                         <h4>Bee++</h4>
                         <div class="description">
                             <p><strong>Role:</strong> UI/UX, Database integration</p>
@@ -128,6 +128,51 @@
                     </div>
                 </div>
             </div> -->
+        </div>
+        </div>
+        <div id="beeModal" class="modal">
+            <span id="beeClose" class="close cursor">&times;</span>
+            <div class="modal-content">
+                <div class="slides">
+                    <div class="numbertext"> 1 / 4</div>
+                    <img src="">
+                </div>
+                <div class="slides">
+                    <div class="numbertext"> 2 / 4</div>
+                    <img src="">
+                </div>
+                <div class="slides">
+                    <div class="numbertext"> 3 / 4</div>
+                    <img src="">
+                </div>
+                <div class="slides">
+                    <div class="numbertext"> 4 / 4</div>
+                    <img src="">
+                </div>
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+            
+            <!-- Thumbnail image controls -->
+            <div class="column">
+                <img class="demo" src=""  alt="Nature" onclick="currentSlide(1)">
+            </div>
+        
+            <div class="column">
+                <img class="demo" src="" alt="Snow" onclick="currentSlide(2)">
+            </div>
+        
+            <div class="column">
+                <img class="demo" src="" alt="Mountains" onclick="currentSlide(3)">
+            </div>
+        
+            <div class="column">
+                <img class="demo" src="" alt="Lights" onclick="currentSlide(4)">
+            </div>
         </div>
         </div>
         <div class='container'>
