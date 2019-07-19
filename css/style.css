@@ -4,6 +4,7 @@
 **/
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro:400,300,300italic,400italic,700,700italic);
 
 /* UNIVERSAL */
 
@@ -275,7 +276,8 @@ img{
 
 #codes #beeLogo{
   margin-left:1rem;
-  display:block
+  display:block;
+  align-self: center;
 }
 
 a{
@@ -393,5 +395,9 @@ a h3:hover{
     padding-top:0.8rem;
   }
 
+}
+
+.code{
+  font-family: 'Anonymous Pro', Helvetica, sans-serif;
 }
 
