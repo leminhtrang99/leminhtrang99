@@ -1,0 +1,170 @@
+.text {
+    font-size: 13px;
+    line-height: 1.375;
+}
+
+.profileAvatar{
+    background: #fff;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    z-index: 3;
+    bottom: -35px;
+    left: 150px;
+    position: absolute;
+    transition: bottom .3s;
+}
+
+.profileText{
+    left:-90px;
+    position: absolute;
+    transition: bottom .3s;
+
+}
+.profileName {
+    bottom: 190px;
+    color: #000;
+    font-size: 21px;
+}
+.profileId {
+    bottom: 180px;
+    font-size: 14px;
+    color: #657786;
+    
+}
+
+.profileBio {
+    bottom: 140px;
+    font-size: 14px;
+    color: #000;
+}
+.profileLocation{
+    bottom: 100px;
+    font-size: 14px;
+    color: #657786;
+}
+.profileLink{
+    bottom: 92px;
+    font-size: 14px;
+    color: skyblue;
+    font-weight: 100;
+}
+
+.profileLink:hover{
+    text-decoration: underline;
+    color: skyblue;
+
+}
+
+
+.profileDate{
+    bottom: 50px;
+    font-size: 14px;
+    color: #657786;
+}
+
+.profileBday{
+    bottom: 25px;
+    font-size: 14px;
+    color: #657786;
+}
+
+
+.feather {
+    width: 14px;
+    height: 14px;
+    stroke: #657786;
+}
+.tweetContainer{
+    padding-left: 1em;
+    padding-top:0.05em;
+    font-size: 10px;
+}
+.banner {
+    background: #fff;
+    font-size: 14px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
+    width: 100%;
+    
+
+}
+.followBanner {
+    height: 60px; 
+}
+
+.text{
+    color: #657786;
+    align-content: center;
+    font-weight: bold;
+}
+
+.headBanner .text{
+    vertical-align: middle;
+    margin-left: 10em;
+}
+
+body{
+    background:#e6ecf0;
+}
+
+.tweetContainer{
+    background: #fff;
+    padding-left: 2em;
+    padding-right: 2em;
+    position: relative;
+    height: 250px;
+    padding-top: 2em;
+    margin: 8px;
+}
+
+.button{
+    background-color:skyblue;
+    border: white;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    align-self: right;
+    margin-bottom: 20px;
+    bottom: 10px;
+    left: 33em;
+    position: absolute;
+}
+
+
+
+.tweetContainer p{
+    color:#657786;
+    margin-left: 10px;
+}
+.tweetContainer h4{
+    color: #000;
+    margin-left: 10px;
+}
+
+.headBanner {
+ box-shadow: black;
+ position: relative;
+ z-index: 1;
+
+ margin-right: 10em;
+ margin-top: 0.5em;
+ border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+body{
+    overflow: hidden;
+}
+
+br {
+    line-height: 0%;
+    content: " ";
+}
+
+.inline-div{
+    display: inline;
+   font-size: 14px;
+}
