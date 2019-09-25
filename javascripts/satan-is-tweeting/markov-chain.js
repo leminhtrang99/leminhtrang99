@@ -15,12 +15,13 @@ var useUpperCase = function(wordList) {
 var stopAtTweetLength = function(sentence) {
     return sentence.length >= 280;
 }
-var result = quotes.start(useUpperCase).end(stopAtTweetLength).process();
+
 
 document.getElementById('tweetButton').addEventListener('click',showTweet);
 function showTweet(){
+  var result = quotes.start(useUpperCase).end(stopAtTweetLength).process();
   document.getElementById('tweet').innerHTML = result;
 }
-console.log(result);
+//console.log(result);
 
 
