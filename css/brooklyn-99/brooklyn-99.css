@@ -2,6 +2,10 @@
     box-sizing: border-box;
   }
   
+  /* @import url(https://fonts.googleapis.com/css?family=Staatliches&display=swap); */
+  @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Staatliches&display=swap');
+
   html,
   body {
     margin: 0;
@@ -75,12 +79,16 @@
   }
   
   .intro__hed {
-    font-size: 2em;
+    font-size: 3.5em;
     margin: 2rem auto 0.5rem auto;
+    font-family: 'Staatliches';
+
   }
   
   .intro__dek {
     color: #8a8a8a;
+    font-family: 'Open Sans';
+    font-size:0.7em;
   }
   
   .github-corner:hover .octo-arm {
@@ -132,8 +140,8 @@
   #scrolly {
     position: relative;
     display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
+    display: -ms-flexbox;
+    display: flex;
     background-color:  #faf6ff;
     padding: 1rem;
 }
@@ -149,6 +157,7 @@ article {
     position: relative;
     padding: 0 1rem;
     max-width: 20rem;
+    font-family: 'Open Sans';
 }
 
 figure {
@@ -160,6 +169,8 @@ figure {
     -moz-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     background-color:  #faf6ff;
+
+   
 }
 
 figure p {
@@ -181,6 +192,7 @@ figure p {
     margin: 0 auto 2rem auto;
     background-color: #3b3b3b;
     color: #fff;
+    font-family: 'Open Sans', bold;
 }
 
 .step:last-child {
@@ -197,8 +209,17 @@ figure p {
     padding: 1rem;
     font-size: 1.5rem;
 }
-.bar { fill: 	gold; }
+.bar { 
+  fill: 	gold; 
+}
 
 .tick line{
   visibility:hidden;
 }
+
+.tick text{
+  font-size: 1.25em;
+  font-family: 'Open Sans', bold;
+  font-weight: 700;
+}
+

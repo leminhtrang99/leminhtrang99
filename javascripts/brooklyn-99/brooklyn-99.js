@@ -63,7 +63,7 @@ var main = d3.select('main')
 		{"char":"Doug Judy","lines":1.02},{"char":"Kevin","lines":1.17},
 		{"char":"Teddy","lines":0},{"char":"Pimento","lines":0}];
 
-		var margin = {top: 20, right: 20, bottom: 30, left: 120},
+		var margin = {top: 20, right: 20, bottom: 30, left: 180},
 			width = 960 - margin.left - margin.right,
 			height = 500 - margin.top - margin.bottom;
 
@@ -85,16 +85,26 @@ var main = d3.select('main')
 			.attr("transform", 
 				"translate(" + margin.left + "," + margin.top + ")");
 
+
+
+// gridlines in x axis function
+function make_y_gridlines() {		
+    return d3.axisBottom(y)
+        .ticks(14)
+}
+
 function redrawChart(array) {
 // format the data
 	d3.selectAll('svg > g > *').remove();
 	array.forEach(function(d) {
 		d.lines = +d.lines;
 	});
+	
 
   // Scale the range of the data in the domains
   x.domain([0, d3.max(array, function(d){ return d.lines; })])
   y.domain(array.map(function(d) { return d.char; }));
+
 
   // append the rectangles for the bar chart
   svg.selectAll(".bar")
@@ -105,16 +115,19 @@ function redrawChart(array) {
       .attr("y", function(d) { return y(d.char); })
       .attr("height", y.bandwidth()*0.75);
 
-	// add the x Axis
+
+	//add the x Axis
 	svg.append("g")
-		.attr("transform", "translate(0," + height + ")")
-		.call(d3.axisBottom(x));
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x).tickSizeOuter(0));
 
 	// add the y Axis
 	svg.append("g")
-		.call(d3.axisLeft(y));
+		.call(d3.axisLeft(y).tickSizeOuter(0));
+
 }
-	
+
+
 
 //SCROLLAMA
 
@@ -153,6 +166,7 @@ function redrawChart(array) {
 		var arrayName = "ss" + (response.index+1);
 		//console.log(arrayName);
 		redrawChart(window[arrayName]);
+		
 	}
 
 	function setupStickyfill() {
@@ -173,7 +187,7 @@ function redrawChart(array) {
 		scroller.setup({
 			step: '#scrolly article .step',
 			offset: 0.33,
-			debug: true,
+			debug: false,
 		})
 			.onStepEnter(handleStepEnter)
 
