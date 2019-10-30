@@ -63,7 +63,7 @@ var main = d3.select('main')
 		{"char":"Doug Judy","lines":1.02},{"char":"Kevin","lines":1.17},
 		{"char":"Teddy","lines":0},{"char":"Pimento","lines":0}];
 
-		var margin = {top: 20, right: 20, bottom: 30, left: 180},
+		var margin = {top: 20, right: 20, bottom: 50, left: 180},
 			width = 960 - margin.left - margin.right,
 			height = 500 - margin.top - margin.bottom;
 
@@ -124,7 +124,14 @@ function redrawChart(array) {
 	// add the y Axis
 	svg.append("g")
 		.call(d3.axisLeft(y).tickSizeOuter(0));
-
+	svg.append("text")             
+      .attr("transform",
+            "translate(" + (width/2) + " ," + 
+                           (height + margin.top + 20) + ")")
+      .style("text-anchor", "middle")
+	  .style("font-size","15px")
+	  .style("font-family", "Open Sans")
+      .text("Distribution of Lines Spoken (%)");
 }
 
 
