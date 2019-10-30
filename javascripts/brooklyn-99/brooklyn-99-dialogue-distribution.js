@@ -87,11 +87,6 @@ var main = d3.select('main')
 
 
 
-// gridlines in x axis function
-function make_y_gridlines() {		
-    return d3.axisBottom(y)
-        .ticks(14)
-}
 
 function redrawChart(array) {
 // format the data
@@ -119,7 +114,7 @@ function redrawChart(array) {
 	//add the x Axis
 	svg.append("g")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x).tickSizeOuter(0));
+      .call(d3.axisBottom(x).tickSizeOuter(0).ticks(14));
 
 	// add the y Axis
 	svg.append("g")
@@ -132,6 +127,10 @@ function redrawChart(array) {
 	  .style("font-size","15px")
 	  .style("font-family", "Open Sans")
       .text("Distribution of Lines Spoken (%)");
+	
+	
+	
+
 }
 
 
