@@ -86,7 +86,10 @@ var main = d3.select('main')
 				"translate(" + margin.left + "," + margin.top + ")");
 
 
-
+function make_x_gridlines() {
+    return d3.axisBottom(x)
+    	.ticks(12)
+  }
 
 function redrawChart(array) {
 // format the data
@@ -114,11 +117,11 @@ function redrawChart(array) {
 	//add the x Axis
 	svg.append("g")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x).tickSizeOuter(0).ticks(14));
+      .call(d3.axisBottom(x).tickSizeOuter(0).tickValues(d3.range(2, d3.max(array, function(d){ return d.lines; }),2 )));
 
 	// add the y Axis
 	svg.append("g")
-		.call(d3.axisLeft(y).tickSizeOuter(0));
+		.call(d3.axisLeft(y).tickSizeOuter(0).tickSize(0));
 	svg.append("text")             
       .attr("transform",
             "translate(" + (width/2) + " ," + 
@@ -127,9 +130,15 @@ function redrawChart(array) {
 	  .style("font-size","15px")
 	  .style("font-family", "Open Sans")
       .text("Distribution of Lines Spoken (%)");
-	
-	
-	
+
+	svg.append("g")
+  		.attr("class","grid")
+  		.attr("transform","translate(0," + height + ")")
+  		.style("stroke-dasharray",("3,3"))
+  		.call(make_x_gridlines()
+            .tickSize(-height)
+            .tickFormat("")
+         )
 
 }
 

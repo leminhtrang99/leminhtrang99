@@ -233,5 +233,14 @@ figure p {
   font-size: 14px !important;
 }
 
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.6;
+  shape-rendering: crispEdges;
+  visibility: visible;
+}
+.grid path {
+  stroke-width: 0;
+}
 
 
